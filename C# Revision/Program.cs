@@ -8,12 +8,14 @@ namespace C__Revision
         /*
          * syntax be => public[any access modifier] static [void | return type] functionName(){}
          */
-        public static void print() {
-            Console.WriteLine("print function");        
+        public static void print()
+        {
+            Console.WriteLine("print function");
         }
         public static void print02(char c)
         {
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 5; i++)
+            {
                 Console.Write(c);
             }
             Console.WriteLine("print Function 02");
@@ -65,7 +67,7 @@ namespace C__Revision
         }
         #endregion
         #region Out Parameters
-        public static void outParameters(out int  x)
+        public static void outParameters(out int x)
         {
             x = 100; // should be initialized inside the function
             x += 10;
@@ -243,7 +245,7 @@ namespace C__Revision
             //int num2 = dNum; // Compile Time Error
             int num2 = (int)dNum; // Explicit Casting (manually) [larger to smaller]
 
-            dNum= 100.5;
+            dNum = 100.5;
             num2 = (int)dNum;
             //loss data after the decimal point just take the integer part
             Console.WriteLine($"dNum = {dNum} , num2 = {num2}"); // dNum = 100.5 , num2 = 100   
@@ -259,7 +261,7 @@ namespace C__Revision
              * because they will not return an exception if the casting is not possible
              */
             object obj = "Hello";
-            if(obj is string)
+            if (obj is string)
             {
                 Console.WriteLine($"obj is string and its value is {obj}");
             }
@@ -333,7 +335,7 @@ namespace C__Revision
              * by using Value property or by using the null-coalescing operator (??)
              * 
              */
-            string s=null;
+            string s = null;
             /*
             // there are tow warnigs
             //1- warning CS8600: Converting null literal or possible null value to non-nullable type.
@@ -365,11 +367,11 @@ namespace C__Revision
              */
             Console.WriteLine($"name = {name}");
             Console.WriteLine("Enter age");
-            int age ;
+            int age;
             //3 ways to convert string to int
             age = int.Parse(Console.ReadLine()); // may throw exception if the input is not a valid integer
             age = Convert.ToInt32(Console.ReadLine()); // if the input is null it will return 0
-            bool isParsed = int.TryParse(Console.ReadLine(), out  age); // if the input is not a valid integer it will return false and result will be 0
+            bool isParsed = int.TryParse(Console.ReadLine(), out age); // if the input is not a valid integer it will return false and result will be 0
             //=> safe way is TryParse
             //As soon as with all data types
             if (isParsed)
@@ -486,7 +488,7 @@ namespace C__Revision
             int a6 = 10, b6 = 3;
             Console.WriteLine($"a6 = {a6} , b6 = {b6}");
             Console.WriteLine("After using Other/ ternary Operators");
-            Console.WriteLine($"a6 == b6 ? 'true' :'false' {(a6 == b6 ? true : false ) } ");
+            Console.WriteLine($"a6 == b6 ? 'true' :'false' {(a6 == b6 ? true : false)} ");
             // condition ? value if true : value if false
 
             #region Operator Precedence
@@ -512,12 +514,12 @@ namespace C__Revision
             #endregion
             #region Control Flow
             #region If
-            int x=10, y= 3;
+            int x = 10, y = 3;
             if (x > y)
             {
                 Console.WriteLine("x is greater than y");
             }
-            else if(x < y)
+            else if (x < y)
             {
                 Console.WriteLine("x is less than y");
             }
@@ -603,7 +605,8 @@ namespace C__Revision
             //Nested switch
             int month = 2;
             int year = 2020;
-            switch (month) {
+            switch (month)
+            {
                 case 1:
                 case 3:
                 case 5:
@@ -717,7 +720,7 @@ namespace C__Revision
             };
             foreach (var item in stringBuildersArray)
             {
-               
+
                 Console.WriteLine(item);
             }
             Console.WriteLine("====================");
@@ -758,7 +761,7 @@ namespace C__Revision
              */
             #region Types of Array
             #region Single Dimensional Array
-            int[] arr1 = [1,2,3,4,5]; // declare and allocate memory for 5 integers
+            int[] arr1 = [1, 2, 3, 4, 5]; // declare and allocate memory for 5 integers
             Console.WriteLine($"Length of arr1 = {arr1.Length}"); // Length of arr1 = 5
             for (int i = 0; i < arr1.Length; i++)
             {
@@ -898,12 +901,12 @@ namespace C__Revision
              * 
              */
 
-           
+
 
 
             #endregion
             #region Params Parameters
-            paramsParameters(1,2,3, 4, 5);
+            paramsParameters(1, 2, 3, 4, 5);
             /*
              * the param Must be the last parameter in the function
              * you passing multiple values of the same data type
@@ -923,7 +926,113 @@ namespace C__Revision
 
 
 
+            #region Problems Solving CodeForce
+            #region Problem 1
+            /*
+             * Mahmoud has n line segments, the i-th of them has length ai. Ehab challenged him to use exactly 3 line segments to form a non-degenerate triangle. Mahmoud doesn't accept challenges unless he is sure he can win, so he asked you to tell him if he should accept the challenge. Given the lengths of the line segments, check if he can choose exactly 3 of them to form a non-degenerate triangle.
+             * 
+             *  Mahmoud should use exactly 3 line segments, he can't concatenate two line segments or change any length. A non-degenerate triangle is a triangle with positive area.
+             */
 
+            //int sz = int.Parse(Console.ReadLine());
+            // double[] arr = new double[sz];
+            // arr= Array.ConvertAll(Console.ReadLine().Split(' '), double.Parse);// read array from single line
+            // Array.Sort(arr); // sort the array in ascending order [Built-in Method]
+            // bool flag = false;
+            // for (int i = 0; i < sz-2; i++) // 1 2 3 4 5  
+            // {
+            //     if (arr[i] + arr[i+1] > arr[i + 2])
+            //     {
+            //         flag = true; 
+            //         break;
+            //     }
+            // }
+            // Console.WriteLine(flag ? "YES" : "NO");
+
+
+
+
+            #endregion
+            #region Problem 2
+            /*
+             * Trippi Troppi resides in a strange world. The ancient name of each country consists of three strings. The first letter of each string is concatenated to form the country's modern name.
+
+            Given the country's ancient name, please output the modern name.
+
+            Input
+                The first line contains an integer t
+         – the number of independent test cases (1≤t≤100).
+
+                  The following t
+                lines each contain three space-separated strings. Each string has a length of no more than 10
+                , and contains only lowercase Latin characters.
+             */
+
+            //=======================================
+            //int sz = int.Parse(Console.ReadLine());
+            //string[] ancientName = new string[sz];
+            //for (int i = 0; i < sz; i++)
+            //{
+            //    string strCountry = "";
+            //    string[] arr = Console.ReadLine().Split(' ');
+            //    char fristChar = arr[0][0];
+            //    char secondChar = arr[1][0];
+            //    char thirdChar = arr[2][0];
+            //    strCountry = strCountry + fristChar + secondChar + thirdChar;
+
+            //    ancientName[i] =strCountry ;
+            //}
+            //for (int i = 0; i < sz; i++)
+            //{
+            //    Console.WriteLine(ancientName[i]);
+            //}
+
+            #endregion
+            #region Problem 3
+            /*
+             * Skibidus lands on a foreign planet, where the local Amog tribe speaks the Amog'u language. In Amog'u, there are two forms of nouns, which are singular and plural.
+
+                Given that the root of the noun is transcribed as S
+                , the two forms are transcribed as:
+
+                Singular: S
+                 +
+                 "us"
+                Plural: S
+                 +
+                 "i"
+                Here, +
+                 denotes string concatenation. For example, abc +
+                def =
+                    abcdef.
+
+                For example, when S
+                is transcribed as "amog", then the singular form is transcribed as "amogus", and the plural form is transcribed as "amogi". Do note that Amog'u nouns can have an empty root — in specific, "us" is the singular form of "i" (which, on an unrelated note, means "imposter" and "imposters" respectively).
+
+                Given a transcribed Amog'u noun in singular form, please convert it to the transcription of the corresponding plural noun.
+             */
+
+
+            //==========================================================
+
+
+            //int sz = int.Parse(Console.ReadLine());
+            //string[] singularNames = new string[sz];
+            //for (int i = 0; i < sz; i++)
+            //{
+            //    string singularName = Console.ReadLine();
+                
+            //    string root = singularName.Substring(0, singularName.Length - 2);
+            //    string pluralName = root + "i";
+            //    singularNames[i] = pluralName;
+            //}
+            //for (int i = 0; i < sz; i++)
+            //{
+            //    Console.WriteLine(singularNames[i]);
+            //}
+
+            #endregion
+            #endregion
 
 
 
