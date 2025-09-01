@@ -1021,7 +1021,7 @@ namespace C__Revision
             //for (int i = 0; i < sz; i++)
             //{
             //    string singularName = Console.ReadLine();
-                
+
             //    string root = singularName.Substring(0, singularName.Length - 2);
             //    string pluralName = root + "i";
             //    singularNames[i] = pluralName;
@@ -1032,12 +1032,98 @@ namespace C__Revision
             //}
 
             #endregion
+            #region Problem 4
+            /*
+             * You are given three integers a
+                , b
+                , and c
+                 such that exactly one of these two equations is true:
+
+                a+b=c
+                a−b=c
+                Output + if the first equation is true, and - otherwise.
+                Input
+                The first line contains a single integer t
+                 (1≤t≤162
+                ) — the number of test cases.
+
+                The description of each test case consists of three integers a
+                , b
+                , c
+                 (1≤a,b≤9
+                , −8≤c≤18
+                ). The additional constraint on the input: it will be generated so that exactly one of the two equations will be true.
+
+                        Output
+                        For each test case, output either + or - on a new line, representing the correct equation.
+             */
+
+            //==========================================================
+            //int tests = int.Parse(Console.ReadLine());
+            //int[] arr = new int[3];
+            //while(tests-- > 0)
+            //{
+            //    arr = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+            //    if (arr[0] + arr[1] == arr[2])
+            //    {
+            //        Console.WriteLine("+");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("-");
+            //    }
+
+            //}
+
             #endregion
+            #region Problem 5
+            /*
+             * You are given three integers a
+                , b
+                , and c
+                . Determine if one of them is the sum of the other two.
+
+                Input
+                The first line contains a single integer t
+                 (1≤t≤9261
+                ) — the number of test cases.
+
+                The description of each test case consists of three integers a
+                , b
+                , c
+                 (0≤a,b,c≤20
+                ).
+
+                Output
+                For each test case, output "YES" if one of the numbers is the sum of the other two, and "NO" otherwise.
+
+                You can output the answer in any case (for example, the strings "yEs", "yes", "Yes" and "YES" will be recognized as a positive answer).
+             */
+            //=====================
+            //int t= int.Parse(Console.ReadLine());
+            //int[] arr = new int[3];
+            //while (t-- != 0)
+            //{
+            //    arr = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+            //    Array.Sort(arr);
+            //    if (arr[0] + arr[1] == arr[2])
+            //    {
+            //        Console.WriteLine("YES");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("NO");
+            //    }
+            //}
+
+                #endregion
+
+                #endregion
 
 
 
 
 
-        }
+            }
     }
 }
