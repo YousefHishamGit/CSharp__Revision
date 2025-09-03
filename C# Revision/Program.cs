@@ -6,8 +6,9 @@ namespace C__Revision
     {
         #region Functions
         /*
-         * syntax be => public[any access modifier] static [void | return type] functionName(){}
+         * syntax be => public[any access modifier] [static] [void | return type] functionName(){}
          */
+       
         public static void print()
         {
             Console.WriteLine("print function");
@@ -102,6 +103,20 @@ namespace C__Revision
         #endregion
 
 
+        #endregion
+        #region Static and non-Static Functions
+        /*
+         * static methods belong to the class itself and can be called without creating an instance of the class.
+         * instatic methods belong to an instance of the class and can only be called on an instance of the class.
+         */
+        public void nonStaticFunction()
+        {
+            Console.WriteLine("nonStaticFunction");
+        }
+        public static void staticFunction()
+        {
+            Console.WriteLine("staticFunction");
+        }
         #endregion
         #endregion
         static void Main(string[] args)
@@ -922,6 +937,16 @@ namespace C__Revision
 
             #endregion
 
+            #region Static vs Instance(Non-static) Function
+            //Static Function
+            staticFunction(); // can call static function inside static function directly (Main is already static)
+            Program.staticFunction(); // can call static function inside static function by using the Class name [But it is not necessary]
+            //Instance Function
+            Program p = new Program(); // create object from the class to call the instance function
+            p.nonStaticFunction(); // call instance function by using the object [Necessary]
+            //nonStaticFunction(); // Compile Time Error => cannot call instance function inside static function directly [you must create Object]
+            #endregion
+
             #endregion
 
 
@@ -1116,14 +1141,14 @@ namespace C__Revision
             //    }
             //}
 
-                #endregion
+            #endregion
 
-                #endregion
-
-
+            #endregion
 
 
 
-            }
+
+
+        }
     }
 }
