@@ -944,7 +944,7 @@ namespace C__Revision
             //Instance Function
             Program p = new Program(); // create object from the class to call the instance function
             p.nonStaticFunction(); // call instance function by using the object [Necessary]
-            //nonStaticFunction(); // Compile Time Error => cannot call instance function inside static function directly [you must create Object]
+                                   //nonStaticFunction(); // Compile Time Error => cannot call instance function inside static function directly [you must create Object]
             #endregion
 
             #endregion
@@ -1142,7 +1142,88 @@ namespace C__Revision
             //}
 
             #endregion
+            #region Problem 6
+            /*
+                             * In an ICPC contest, balloons are distributed as follows:
 
+                Whenever a team solves a problem, that team gets a balloon.
+                The first team to solve a problem gets an additional balloon.
+                A contest has 26 problems, labelled A
+                , B
+                , C
+                , ..., Z
+                . You are given the order of solved problems in the contest, denoted as a string s
+                , where the i
+                -th character indicates that the problem si
+                 has been solved by some team. No team will solve the same problem twice.
+                Determine the total number of balloons that the teams received. Note that some problems may be solved by none of the teams.
+
+                Input
+                The first line of the input contains an integer t
+                 (1≤t≤100
+                ) — the number of testcases.
+
+                The first line of each test case contains an integer n
+                 (1≤n≤50
+                ) — the length of the string.
+
+                The second line of each test case contains a string s
+                 of length n
+                 consisting of uppercase English letters, denoting the order of solved problems.
+
+                Output
+                For each test case, output a single integer — the total number of balloons that the teams received.
+           *** Note
+                In the first test case, 5
+                 balloons are given out:
+
+                Problem A
+                 is solved. That team receives 2
+                 balloons: one because they solved the problem, an an additional one because they are the first team to solve problem A
+                .
+                Problem B
+                 is solved. That team receives 2
+                 balloons: one because they solved the problem, an an additional one because they are the first team to solve problem B
+                .
+                Problem A
+                 is solved. That team receives only 1
+                 balloon, because they solved the problem. Note that they don't get an additional balloon because they are not the first team to solve problem A
+                .
+                The total number of balloons given out is 2+2+1=5
+                .
+                In the second test case, there is only one problem solved. The team who solved it receives 2
+                 balloons: one because they solved the problem, an an additional one because they are the first team to solve problem A
+.
+             */
+            //=========================================
+
+            //int t = int.Parse(Console.ReadLine());
+            //while (t-- != 0)
+            //{
+            //    int sz = int.Parse(Console.ReadLine());
+            //    string s = Console.ReadLine();
+            //    char[] ch = s.ToCharArray();
+            //    Array.Sort(ch);
+            //    int count = 2;
+            //    char c = ch[0];
+            //    for (int i = 1; i < sz; i++)
+            //    {
+            //        if (ch[i] == c)
+            //        {
+            //            count++;
+            //        }
+            //        else
+            //        {
+            //            count += 2;
+            //            c = ch[i];
+            //        }
+            //    }
+            //    Console.WriteLine(count);
+
+
+
+            //}
+            #endregion
             #endregion
 
 
