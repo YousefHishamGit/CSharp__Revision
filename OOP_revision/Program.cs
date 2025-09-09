@@ -76,6 +76,63 @@ namespace OOP_revision
         }
         #endregion
         #endregion
+        #region Pillars / Concepts Example
+        #region Encapsulation
+        class EncapsulationTest {
+            private int id;
+            private string name;
+            //Auto-implemented property
+            public int MyProperty01 { get; set; }
+            //Read-Only property
+            public int MyProperty02 { get; private set; }
+            public int MyProperty03 { get;  }
+            //Full property
+            //used if we want to make logic in get or set
+            private int myVar;
+
+            public int MyProperty04
+            {
+                get { return myVar; }
+                set { if (value > 10) { myVar = value; } }
+            }
+
+
+            public void SetId(int id)
+            {
+                this.id = id;
+            }
+            public void SetName(string name)
+            {
+                this.name = name;
+            }
+            public string GetName()
+            {
+                return name;
+            }
+            //public EncapsulationTest this[int index]
+            //{
+            //    get
+            //    {
+            //        //return object but should make logic to return the correct object
+            //        //can return like obj[index]; => in Main
+            //    }
+            //    set
+            //    {
+            //        //set object but should make logic to set the correct object
+            //        //then i can set like obj[index] = value; => in Main
+            //    }
+            //}
+            public void DisplayName() {
+                Console.WriteLine($"ID: {id}");
+                Console.WriteLine($"Name: {name}");
+            }
+
+
+
+
+        }
+        #endregion
+        #endregion
         static void Main(string[] args)
         {
             #region OOP Concepts
@@ -293,6 +350,102 @@ namespace OOP_revision
 
             #endregion
             #region OOP Pillars / Concepts
+            #region Members
+            /*
+             * Members are the attributes and methods that define the behavior and state of an object.
+             * 
+             * Attributes ( Properties / Fields ) : are the data that describe the object.
+             * 
+             * Methods ( Functions ) : are the actions that the object can perform.
+             * 
+             * ==> Members that defined inside the class or struct or record
+             *    1.Fields / Attributes
+             *    ==>normal variable that defined inside the class or struct or record
+             *    2.Constants
+             *    ==> Field that its value can't be changed after initialization
+             *    3.Properties
+             *    ==> special kind of field that has get and set accessors
+             *    ==> has 3 types ( read only , full property , Auto-implemented property )
+             *    4.Methods
+             *    ==> normal function make specific task/logic
+             *    5.Constructors
+             *    ==> special method that called when an object of the class is created
+             *    6.Events
+             *    ==> special kind of delegate that used to notify when something happens
+             *    7.Finalizers
+             *    ==> special method that called when an object is destroyed 
+             *    8.Indexers
+             *    ==> special kind of property that allows to access the object like an array
+             *    9.Operators
+             *    ==> special kind of method that allows to define custom behavior for operators (operator overloading)
+             *    10.Nested Types
+             *    ==> special kind of type that defined inside another type
+             * 
+             * 
+             */
+            #endregion
+            #region Accessibility
+            /** Accessibility is the ability to control the visibility and accessibility of members of a class or struct.
+             * 
+             * it is achieved by using access modifiers 
+             * 
+             * Access Modifiers:
+             * 1. Private           => accessible only within the same class or struct
+             * 2. Private Protected => accessible within the same class or struct and when derived classes inherit it , it be private in the derived class
+             * 3. Protected         => accessible within the same class or struct and when derived classes inherit it AND Be as private in them
+             * 4. Internal          => accessible only within the same assembly ( project )
+             * 5. Protected Internal=> as private protected but be internal in derived classes 
+             * 6. Public            => accessible from anywhere
+             *
+             * ==> Default Access Modifier is Private
+             * 
+             * 
+             * 
+             * 
+             */
+            #endregion
+            #region Encapsulation
+            /*
+             * Encapsulation is the process of bundling data and methods that operate on that data within a single unit or class.
+             * 
+             * it is used to hide the internal details of an object from the outside world.
+             * 
+             * it is achieved by using access modifiers (private , private protected ,protected ,internal ,protected internal , public)
+             * 
+             * 
+             * Benefits:
+             * 1. Control Access to Data
+             * 2. Maintainability
+             * 3. Flexibility and Extensibility
+             * 4. Data Hiding
+             * 
+             * ===> يقدر يوصل لاية userالخلاصة انا البحدد ال 
+             * 
+             * 
+             *  
+             * 
+             * 
+             * 
+             */
+            //====================================================
+
+
+            //EncapsulationTest e1 = new EncapsulationTest();
+            ////e1.id=1 // error => can't access private member
+            //e1.SetId(1);
+            ////e1.Name="Ahmed"; // error => can't access private member
+            //e1.SetName("Ahmed");
+            //e1.DisplayName();
+            ////int id = e1.id; // error => can't access private member and there is no getter method
+            ////then it can't get id value i forced the use setter only
+
+            //Console.WriteLine("Name: " + e1.GetName());
+
+
+            #endregion
+            #region Inheritance
+
+            #endregion
 
             #endregion
 
